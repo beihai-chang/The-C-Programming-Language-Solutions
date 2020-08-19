@@ -1,5 +1,5 @@
 /*
- * Filename:    fahr-to-celsius.c
+ * Filename:    fahr_to_celsius.c
  * Author:      beihai-chang
  * Date:        17-AUG-2020
  *
