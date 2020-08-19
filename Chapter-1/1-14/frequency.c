@@ -69,7 +69,8 @@ int main(void)
     printf("\n");
 
     return 0;
-}/* Output Example:
+}
+/* Output Example:
 Please enter some sentences: do not go gentle into that good night.
 Rage, rage against the dying of the light.                
 10	  	  	  	  	  	  	  	  	  	  	  	  	**	  

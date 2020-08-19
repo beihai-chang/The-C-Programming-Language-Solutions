@@ -64,7 +64,8 @@ int main(void)
     }
 
     return 0;
-}/* Output Example:
+}
+/* Output Example:
 Please enter 7 words: rage anainst the dying of the light
  7	   	***	   	   	   	   	   
  6	   	***	   	   	   	   	   
