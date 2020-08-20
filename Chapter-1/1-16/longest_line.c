@@ -25,7 +25,6 @@ int main(void)
     char longest[MAXLINE];
 
     maxlen = 0;
-    line[0] = '\0';
     longest[0] = '\0';
 
     while (len = mygetline(line, MAXLINE))
@@ -59,16 +58,11 @@ int mygetline(char line[], int maxline)
             line[i] = '\0';
         }
     }
-    // If the current input starts with '\0', the function will return 0
-    // indicating that an empty line occurs. 
     if (i == 0 && c == EOF)
-        return i;
-    else if (i < maxline - 2 && c == '\n')
     {
-        line[i++] = c;
         line[i] = '\0';
     }
-    else if (i < maxline - 2 && c == EOF)
+    else if (i <= maxline - 2)
     {
         line[i++] = '\n';
         line[i] = '\0';

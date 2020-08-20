@@ -21,8 +21,6 @@ int main(void)
     int len, isempty, c;
     char line[MAXLINE];
 
-    line[0] = '\0';
-
     printf("Enter some lines:\n");
     while (len = mygetline(line, MAXLINE))
     {
@@ -73,7 +71,9 @@ int mygetline(char line[], int maxline)
         }
     }
     if (i == 0 && c == EOF)
-        return i;
+    {
+        line[i] = '\0';
+    }
     else if (i <= maxline - 2)
     {
         line[i++] = '\n';

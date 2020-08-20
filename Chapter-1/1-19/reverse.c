@@ -23,8 +23,6 @@ int main(void)
     char line[MAXLINE];
     int len;
 
-    line[0] = '\0';
-
     while (len = mygetline(line, MAXLINE))
     {
         reverse(line);
@@ -49,7 +47,9 @@ int mygetline(char line[], int maxline)
         }
     }
     if (i == 0 && c == EOF)
-        return i;
+    {
+        line[i] = '\0';
+    }
     else if (i <= maxline - 2)
     {
         line[i++] = '\n';
