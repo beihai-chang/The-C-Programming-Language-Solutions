@@ -1,34 +1,34 @@
 /*
- * Filename:    lines.c
+ * Filename:    reverse.c
  * Author:      beihai-chang
  * Date:        20-AUG-2020
  *
  * The C Programming Language, second edition,
  * by Brian Kernighan and Dennis Ritchie
  *
- * Write a program to print all input lines that 
- * are longer than 80 characters.
+ * Write a function reverse(s) that reverses the character 
+ * string s. Use it to write a program that reverses its 
+ * input a line at a time.
  */
 
 #include <stdio.h>
 
 #define MAXLINE 1000
-#define UPPERLEN 80
 
 int mygetline(char line[], int maxline);
+void reverse(char s[]);
 
 int main(void)
 {
-    int len;
     char line[MAXLINE];
+    int len;
 
     line[0] = '\0';
 
-    printf("Enter some lines:\n");
     while (len = mygetline(line, MAXLINE))
     {
-        if (len > UPPERLEN)
-            printf("%d: %s", len, line);
+        reverse(line);
+        printf("%s", line);
     }
 
     return 0;
@@ -57,4 +57,19 @@ int mygetline(char line[], int maxline)
     }
 
     return i;
+}
+
+void reverse(char s[])
+{
+    int i, c, upper, temp;
+
+    for (i = 0; (c = s[i]) != '\n' && c != '\0'; i++)
+        ;
+    upper = i - 1;
+    for (int j = 0; j <= (upper - 1) / 2; j++)
+    {
+        temp = s[upper - j];
+        s[upper - j] = s[j];
+        s[j] = temp;
+    }
 }
