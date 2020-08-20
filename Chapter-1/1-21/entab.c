@@ -59,6 +59,8 @@ int main(void)
     return 0;
 }
 /*Output example:
+(If the tab width in your text editor is set to 4 columns)
+(Then the next two lines should be identical)
 a      b   cd   e     f        r   h   s
 a	   b   cd	e	  f		   r   h   s
 */
