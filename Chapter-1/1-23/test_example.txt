@@ -1,0 +1,13 @@
+/**
+  * Hello World
+  */
+ #include <stdio.h> // for printf
+ int main(void)
+ {
+     char s[] = "// hello \
+         \"world! /* bonjour */ \"\n";
+     printf("%s\n", s);
+ 
+     return 0;
+ }
+ 
