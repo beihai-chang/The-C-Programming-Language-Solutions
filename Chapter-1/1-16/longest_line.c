@@ -77,12 +77,14 @@ void copy(char to[], char from[])
         ;
 }
 /* Output Example(MAXLINE was set to 8):
+(Input)
 functional
 generic
 technical committee
 object
 since
 next
+(Output)
 The longest line is: techni
 The maximum length is:20
 */

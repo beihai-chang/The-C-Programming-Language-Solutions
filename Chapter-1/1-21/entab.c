@@ -61,6 +61,8 @@ int main(void)
 /*Output example:
 (If the tab width in your text editor is set to 4 columns)
 (Then the next two lines should be identical)
+(Input)
 a      b   cd   e     f        r   h   s
+(Output)
 a	   b   cd	e	  f		   r   h   s
 */
